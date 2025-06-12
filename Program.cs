@@ -1,4 +1,8 @@
-﻿Banda queen = new Banda("Queen");
+﻿using ScreenSound.Modelos;
+
+Banda ira = new("Ira");
+Banda beatles = new("The Beatles");
+Banda queen = new Banda("Queen");
 
 Album albumQueen = new Album("A night at the opera");
 
