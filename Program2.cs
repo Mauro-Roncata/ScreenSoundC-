@@ -5,6 +5,7 @@ using System.ComponentModel.Design;
 using ScreenSound.Menus;
 using ScreenSound.Modelos;
 
+
 //Criando logo e mesagem de boas vindas
 string msgBoasVindas = "Boas vindas ao Screen Sound";
 
@@ -39,6 +40,7 @@ void ExibirOpcoesMenu()
     Console.WriteLine("Digite 2 para para mostrar todas as bandas");
     Console.WriteLine("Digite 3 para avaliar uma banda");
     Console.WriteLine("Digite 4 para registrar um álbum");
+    Console.WriteLine("Digite 5 para avaliar um álbum");
     Console.WriteLine("Digite -1 para sair");
 
     Console.Write("\nDigite sua opção: ");
@@ -72,6 +74,13 @@ void ExibirOpcoesMenu()
         case 4:
             MenuRegistrarAlbum menu4 = new();
             menu4.Executar(bandasRegistradas);
+            VoltarMenu();
+            ExibirOpcoesMenu();
+            break;
+
+            case 5:
+            MenuAvaliarAlbum menu5 = new();
+            menu5.Executar(bandasRegistradas);
             VoltarMenu();
             ExibirOpcoesMenu();
             break;
